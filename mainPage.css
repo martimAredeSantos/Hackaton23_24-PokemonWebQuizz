@@ -1,0 +1,150 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    position:relative;
+}
+
+.full-page {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('resources/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    background-color: #00000050;
+    height: 700px;
+    width: 1640px;
+    position:relative;
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-size: 100px;
+    padding-top: 40px;
+    padding-left: 60px;
+    letter-spacing: 4px;
+    margin: 0px;
+    color: #efefef;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+p {
+    font-weight: 300;
+    width: 800px;
+    font-size: 18px;
+    color: #efefef;
+    font-family: 'Montserrat';
+}
+
+.text {
+    margin-left: 60px;
+    margin-top: 60px;
+    font-size: 22px;
+}
+
+.press-play{
+    display: inline-block;
+    margin-left: 0px;
+    margin-top:50px;
+    font-size: 20px;
+}
+
+.index-button {
+    border: 2px solid currentColor;
+    border-radius: 0rem;
+    margin-left: 60px;
+    margin-top: 40px;
+    width: 300px;
+    height: 100px;
+    color: #2871b9;
+    font-family: 'Montserrat';
+    font-size: 50px;
+    font-weight: 800;
+    overflow: hidden;
+    padding: 1rem 2rem;
+    position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+}
+
+.index-button::after {
+    background-color: #ffcc01;
+    border-radius: 0rem;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+}
+
+.index-button:hover::after {
+    transform: translate(0, 0);
+}
+
+.index-button:hover {
+    border: 2px solid transparent;
+    color: #2871b9;
+    transform: scale(1.05);
+    will-change: transform;
+}
+
+.pokemon-index {
+    background-image: url('resources/charmander.gif');
+    height: 700px;
+    width:700px;
+    position: relative;
+    bottom:700px;
+    left: 1000px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.music {
+    margin-left: 60px;
+    margin-top:40px;
+    width:60px;
+    display: inline-block;
+    padding:0px;
+    margin-right:-10px;
+}
+
+.musicBtn{
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    margin:0px;
+    padding:0px;
+}
+
+.choose-pokemon{
+    height: 600px;
+    width: 800px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    vertical-align: ;
+    background-color:white;
+    z-index:1;
+}
+
+h1{
+    font-family: 'Montserrat';
+    font-size:50px;
+    font-weight: ;
+}
