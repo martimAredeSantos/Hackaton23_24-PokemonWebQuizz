@@ -33,6 +33,7 @@ $(document).ready(function () {
     });
     $(".pokemon-charmander").css({"visibility" : "visible"});
 })
+
 $(".squirtle").on("click" ,function(){
     $(".choose-pokemon").remove();
     $(".full-page").css({
