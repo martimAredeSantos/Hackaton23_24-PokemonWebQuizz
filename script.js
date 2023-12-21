@@ -23,6 +23,7 @@ $(document).ready(function () {
             "pointer-events": "all"
         });
         $(".pokemon-bulbasaur").css({"visibility" : "visible"});
+        localStorage.setItem('pokemon', "bulbasaur");
 })
 
     $(".charmander").on("click" ,function(){
@@ -32,8 +33,8 @@ $(document).ready(function () {
         "pointer-events": "all"
     });
     $(".pokemon-charmander").css({"visibility" : "visible"});
+    localStorage.setItem('pokemon', "charmander");
 })
-
 $(".squirtle").on("click" ,function(){
     $(".choose-pokemon").remove();
     $(".full-page").css({
@@ -41,6 +42,7 @@ $(".squirtle").on("click" ,function(){
         "pointer-events": "all"
     });
     $(".pokemon-squirtle").css({"visibility" : "visible"});
+    localStorage.setItem('pokemon', "squirtle");
 })
 
 })
