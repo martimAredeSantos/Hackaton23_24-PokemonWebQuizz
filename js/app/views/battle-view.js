@@ -54,7 +54,7 @@
     
     internals.rightAnswer = function(anwser){
         console.log(anwser);
-        $('.correct').css('background-color', 'green');
+        $('.correct').css('background-color', '#42bd72');
         startController.level = startController.level+1;
         setTimeout(() => {
             startController.start();

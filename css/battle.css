@@ -179,14 +179,12 @@ body {
   height:300px;
   width: 100%;
   align-content: space-between;
-  border: 1px solid red;
 }
 
 #answers{
   display:flex;
   justify-content: space-between;
   width:1000px;
-  border: 1px solid blue;
   position: absolute;
   left: 50%;
   margin-top:30px;
