@@ -7,6 +7,9 @@
         elements: {}
     };
 
+    let health = document.getElementById("myHealth");
+    let enemyHP = document.getElementById("enemyHealth");
+
     const selectedPokemon = localStorage.getItem('pokemon');
     
     export const externals = {};
@@ -17,7 +20,7 @@
             $("#answers").empty();
             $("#questions").empty();
         }
-    
+        console.log(question);
         internals.elements.question = $(internals.createQuestion(question));
         internals.elements.app.append(internals.elements.question);
     };
@@ -31,6 +34,7 @@
     
     
     internals.createQuestion = function(question) {
+        console.log(question.a);
         let correct = question.anwser[0]; 
         let random = internals.shuffleArray(question.anwser);
 
@@ -56,9 +60,8 @@
     
     internals.rightAnswer = function(answer) {
         console.log(answer);
-        $('.correct').css('background-color', '#42bd72');
+        $('.correct').css('background-color', '#42BD72');
         startController.level = startController.level + 1;
-    
         // Wiggle the selected Pokemon when the right answer is chosen
         switch (selectedPokemon) {
             case 'bulbasaur':
@@ -72,7 +75,12 @@
                 break;
             // Add more cases if you have more Pokemon
         }
-    
+        $(".enemy").children().each(function() {
+            takeDmg($(this));
+        });
+
+        enemyHP.value -= 34;
+
         setTimeout(() => {
             startController.start();
         }, 1000);
@@ -81,9 +89,25 @@
     
     internals.wrongAnswer = function(anwser){
         console.log(anwser);
-        $('.incorrect').css('background-color', '#e36d42');
-        $('.correct').css('background-color', '#42bd72');
+        $('.incorrect').css('background-color', '#E36D42');
+        $('.correct').css('background-color', '#42BD72');
         startController.life = startController.life-1;
+        $(".enemy").children().each(function() {
+            wigglePokemonReversed($(this));
+        });
+        switch (selectedPokemon) {
+            case 'bulbasaur':
+                takeDmg('.pokemon-bulbasaur');
+                break;
+            case 'charmander':
+                takeDmg('.pokemon-charmander');
+                break;
+            case 'squirtle':
+                takeDmg('.pokemon-squirtle');
+                break;
+            // Add more cases if you have more Pokemon
+        }
+        health.value -= 34;
         setTimeout(() => {
             startController.start();
         }, 1000);
@@ -96,7 +120,7 @@
     
     };
     
-    internals.check
+    internals.check;
     
     externals.bind = function(event, handler) {
         internals.handlers[event] = handler;
@@ -118,6 +142,20 @@
         // Remove the 'wiggle-animation' class after the animation duration
         setTimeout(() => {
             $(pokemonSelector).removeClass('wiggle-animation');
+        }, 800); // Adjust the duration as needed
+    }
+
+    function wigglePokemonReversed(pokemonSelector) {
+        $(pokemonSelector).addClass('wiggle-animation-reversed')
+        // Remove the 'wiggle-animation' class after the animation duration
+        setTimeout(() => {
+            $(pokemonSelector).removeClass('wiggle-animation-reversed');
+        }, 800); // Adjust the duration as needed
+    }
+    function takeDmg(arg){
+        $(arg).addClass("takeDMG-animation")
+        setTimeout(() => {
+            $(arg).removeClass('takeDMG-animation');
         }, 800); // Adjust the duration as needed
     }
     
