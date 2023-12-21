@@ -52,6 +52,38 @@ h1{
   visibility: hidden;
 }
 
+@keyframes wiggle {
+  0%, 100% {
+      transform: rotate(0deg);
+  }
+  25% {
+      transform: rotate(-3deg);
+  }
+  50% {
+      transform: rotate(0deg);
+      translate: -50px;
+  }
+  75% {
+      transform: rotate(-5deg);
+  }
+}
+
+.wiggle-animation {
+  animation: wiggle 0.8s ease-in-out;
+}
+
+
+#enemyPokemon {
+  height: 250px;
+  width:250px;
+  position: fixed;
+  bottom: 350px;
+  left: 410px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: scaleX(-1)
+}
+
 .btn-group {
   display: flex;
   justify-content: center;
@@ -176,10 +208,14 @@ body {
 
 #trivia {
   background-color: #00000080;
-  height:300px;
+  height: 300px;
   width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   align-content: space-between;
 }
+
 
 #answers{
   display:flex;

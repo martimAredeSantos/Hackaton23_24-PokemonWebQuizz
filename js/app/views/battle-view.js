@@ -6,6 +6,8 @@
         handlers: {},
         elements: {}
     };
+
+    const selectedPokemon = localStorage.getItem('pokemon');
     
     export const externals = {};
     
@@ -52,14 +54,30 @@
         $(".incorrect").click( internals.wrongAnswer);
     }
     
-    internals.rightAnswer = function(anwser){
-        console.log(anwser);
+    internals.rightAnswer = function(answer) {
+        console.log(answer);
         $('.correct').css('background-color', '#42bd72');
-        startController.level = startController.level+1;
+        startController.level = startController.level + 1;
+    
+        // Wiggle the selected Pokemon when the right answer is chosen
+        switch (selectedPokemon) {
+            case 'bulbasaur':
+                wigglePokemon('.pokemon-bulbasaur');
+                break;
+            case 'charmander':
+                wigglePokemon('.pokemon-charmander');
+                break;
+            case 'squirtle':
+                wigglePokemon('.pokemon-squirtle');
+                break;
+            // Add more cases if you have more Pokemon
+        }
+    
         setTimeout(() => {
             startController.start();
         }, 1000);
     }
+    
     
     internals.wrongAnswer = function(anwser){
         console.log(anwser);
@@ -93,4 +111,13 @@
             internals.renderButtons();
         }
     };
+    
+    function wigglePokemon(pokemonSelector) {
+        $(pokemonSelector).addClass('wiggle-animation')
+    
+        // Remove the 'wiggle-animation' class after the animation duration
+        setTimeout(() => {
+            $(pokemonSelector).removeClass('wiggle-animation');
+        }, 800); // Adjust the duration as needed
+    }
     
