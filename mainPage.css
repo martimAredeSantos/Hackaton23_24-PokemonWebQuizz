@@ -104,12 +104,34 @@ p {
     will-change: transform;
 }
 
-.pokemon-index {
+.pokemon-bulbasaur {
+    background-image: url('resources/bulbasaur.webp');
+    height: 600px;
+    width:700px;
+    position: fixed;
+    bottom:150px;
+    left: 1060px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    visibility: hidden;
+}
+.pokemon-charmander {
     background-image: url('resources/charmander.gif');
     height: 700px;
     width:700px;
-    position: relative;
-    bottom:700px;
+    position: fixed;
+    bottom:120px;
+    left: 1060px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    visibility: hidden;
+}
+.pokemon-squirtle {
+    background-image: url('resources/squirtle.gif');
+    height: 700px;
+    width:700px;
+    position: fixed;
+    bottom:120px;
     left: 1000px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -135,16 +157,15 @@ p {
 
 .choose-pokemon{
     height: 600px;
-    width: 800px;
+    width: 1000px;
     position:absolute;
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    vertical-align: ;
+    
     background-color:#FFFFFF90;
     z-index:1;
-	
 }
 
 .starters{
@@ -158,6 +179,8 @@ h1{
     font-family: 'Montserrat';
     font-size:50px;
     font-weight: 300;
+    margin-top:100px;
+    color: #116e0c;
 }
 
 .card {
@@ -170,7 +193,7 @@ h1{
 	padding: 0 36px;
 	perspective: 2500px;
 	margin: 0 50px;
-    margin-top:-200px;
+    margin-top:-300px;
 }
 
 .cover-image {
@@ -187,11 +210,17 @@ h1{
 	z-index: -1;
 }
 
+
 .card:hover .wrapper {
 	transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
 	box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
 	-webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.card:hover .cover-image {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .wrapper::before,
@@ -232,20 +261,17 @@ h1{
 }
 
 
-.title {
-	width: 100%;
-	transition: transform 0.5s;
-}
 .card:hover .title {
 	transform: translate3d(0%, -50px, 100px);
 }
 
 .character {
-	width: 400px;
+	width: 190px;
 	opacity: 0;
 	transition: all 0.5s;
 	position: absolute;
 	z-index: -1;
+    margin-bottom: 60px;
 }
 
 .card:hover .character {

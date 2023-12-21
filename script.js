@@ -15,4 +15,31 @@ $(document).ready(function () {
 
     });
 
+
+    $("#bulbasaur").on("click" ,function(){
+        $(".choose-pokemon").remove();
+        $(".full-page").css({
+            "filter": "none",
+            "pointer-events": "all"
+        });
+        $(".pokemon-bulbasaur").css({"visibility" : "visible"});
+})
+
+    $(".charmander").on("click" ,function(){
+    $(".choose-pokemon").remove();
+    $(".full-page").css({
+        "filter": "none",
+        "pointer-events": "all"
+    });
+    $(".pokemon-charmander").css({"visibility" : "visible"});
+})
+$(".squirtle").on("click" ,function(){
+    $(".choose-pokemon").remove();
+    $(".full-page").css({
+        "filter": "none",
+        "pointer-events": "all"
+    });
+    $(".pokemon-squirtle").css({"visibility" : "visible"});
+})
+
 })
