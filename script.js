@@ -15,8 +15,16 @@ $(document).ready(function () {
 
     });
 
+    let test = function () {
+        let sup = sessionStorage.getItem("winner")
+        console.log(sup);
+        if(sup === "winner"){
+            $(".pokemon-walk").css({"visibility" : "visible"});
+        }
+    };
 
     $("#bulbasaur").on("click", function () {
+        test();
         $(".choose-pokemon").remove();
         $(".full-page").css({
             "filter": "none",
@@ -27,6 +35,7 @@ $(document).ready(function () {
     })
 
     $(".charmander").on("click", function () {
+        test();
         $(".choose-pokemon").remove();
         $(".full-page").css({
             "filter": "none",
@@ -36,6 +45,7 @@ $(document).ready(function () {
         localStorage.setItem('pokemon', "charmander");
     })
     $(".squirtle").on("click", function () {
+        test();
         $(".choose-pokemon").remove();
         $(".full-page").css({
             "filter": "none",

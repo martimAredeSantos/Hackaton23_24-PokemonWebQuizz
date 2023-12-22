@@ -17,18 +17,18 @@ import { externals as main } from '../main.js';
             $("#answers").css({
                 "pointer-events": "none"
             });
-            let element = "<h1><p>Loser<p></h1> <button onclick='redirectToReceiver()' class='index-button'> BATTLE!</button>" ;
+            let element = "<h1><p class = 'lostWon'>YOU LOST!<p></h1> <button onclick='redirectToReceiver()' class='index-button tryAgain'>TRY AGAIN!</button>" ;
             $(element).appendTo(final);
             $(".index-button").click( function() {
                 window.localStorage.setItem('winner', "winner");
                 window.location.href = 'index.html'});
-            ;
+            
         return;
         }
         if (externals.level === 3){
             main.randomPoke();
         }
-        if(externals.level === 10){
+        if(externals.level === 9){
             //$(".full-page").css({
             //    "filter": "blur(20px)"
            // });
@@ -36,11 +36,12 @@ import { externals as main } from '../main.js';
             $(final).css({
                 "visibility" : "visible"
             });
-            let element = "<h1><p>Winner<p></h1> <button onclick='redirectToReceiver()' class='index-button'> BATTLE!</button>" ;
+            let element = "<h1><p class = 'lostWon'>YOU WON!<p></h1> <button onclick='redirectToReceiver()' class='index-button tryAgain wonButton'>COLLECT YOUR PIKACHU</button>" ;
             $(element).appendTo(final);
-            localStorage.setItem('winner', "winner");
-            $(".index-button").click( function() {window.location.href = 'index.html'});
-            
+            $(".index-button").click( function() {
+                window.sessionStorage.setItem('winner', "winner");
+                window.location.href = 'index.html'});
+            ;
         return;
         }
         if(externals.life > 0){

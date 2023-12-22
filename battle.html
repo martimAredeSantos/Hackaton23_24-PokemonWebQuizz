@@ -31,90 +31,108 @@
   .progress-container {
     float: right;
   }
-  #HPWrap{
+
+  #HPWrap {
     display: flex;
     orientation: row;
     justify-content: space-between;
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
   }
+
   .amount-progress::-webkit-progress-bar {
-    background-color: #42BD72; /* Set the filled portion color to red for all browsers (including WebKit) */
+    background-color: rgba(187, 185, 185, 0.437);
+    /* Set the filled portion color to red for all browsers (including WebKit) */
   }
+
   .amount-progress::-webkit-progress-value {
-    background-color: #42BD72; /* Set the filled portion color to red for WebKit browsers (Chrome, Safari) */
+    background-color: #42BD72;
+    /* Set the filled portion color to red for WebKit browsers (Chrome, Safari) */
   }
+
   .amount-progress::-moz-progress-bar {
-    background-color: #42BD72; /* Set the filled portion color to red for Firefox */
+    background-color: #42BD72;
+    /* Set the filled portion color to red for Firefox */
   }
+
   .amount-progress {
-    width: 200px; /* Adjust the width as needed */
-    height: 20px; /* Adjust the height as needed */
-    background-color: rgba(187, 185, 185, 0.437); /* Set the background color to red */
-    color: white; /* Set the text color to white */
+    width: 200px;
+    /* Adjust the width as needed */
+    height: 20px;
+    /* Adjust the height as needed */
+    background-color: rgba(187, 185, 185, 0.437);
+    /* Set the background color to red */
+    color: white;
+    /* Set the text color to white */
   }
 </style>
 <script>
   let song = new Audio('./resources/Battle1.mp3');
   // Start playing the music when the page loads
   window.addEventListener('load', () => {
-      song.loop = true;
-      song.play();
+    song.loop = true;
+    song.play();
   });
-</script>  
+</script>
 
 
 <body>
-  <div class="background">
+  <div class="toBlur">
+    <div class="background">
 
-    <div id="HPWrap">
-      <progress id="enemyHealth" class="amount-progress" value="100" max="100"></progress>
-      <progress id="myHealth" class="amount-progress" value="100" max="100"></progress>
-    </div>
-
-  </div>
-  <div class="image-container">
-    <div class="pokemon-bulbasaur"></div>
-    <div class="pokemon-charmander"></div>
-    <div class="pokemon-squirtle"></div>
-
-    <div class="enemy">
-    </div>
-
-    <div id="trivia">
-
-      <div id="questions">
+      <div id="HPWrap">
+        <progress id="enemyHealth" class="amount-progress" value="100" max="100"></progress>
+        <progress id="myHealth" class="amount-progress" value="100" max="100"></progress>
       </div>
 
-      <div id="answers" class="btn-group" role="button" aria-label="Basic checkbox toggle button group">
-        <script>
-          // Create an Audio object
-          let sound = new Audio('./resources/Scratch.mp3'); // Replace with the actual path to your sound file
-        
-          // Function to play the sound
-          function playSound() {
-            sound.play();
-          }
-        
-          // Add a click event listener to the button
-          document.getElementById("answers").addEventListener("click", playSound);
-        </script>
-    </div>
 
-    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
-      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-    <script>
-      window.jQuery ||
-        document.write('<script src="js/vendor/jquery-3.4.0.min.js"><\/script>');
-    </script>
-    <!-- Your custom scripts -->
-    <script src="js/plugins.js"></script>
-    <script type="module" src="js/app/main.js"></script>
-  </div>
-  <!-- Bootstrap JS and Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-    <div id="final"></div>
+      <div class="image-container">
+        <div class="pokemon-bulbasaur"></div>
+        <div class="pokemon-charmander"></div>
+        <div class="pokemon-squirtle"></div>
+
+        <div class="enemy">
+        </div>
+
+        <div id="trivia">
+
+          <div id="questions">
+          </div>
+
+          <div id="answers" class="btn-group" role="button" aria-label="Basic checkbox toggle button group">
+            <script>
+              // Create an Audio object
+              let sound = new Audio('./resources/Scratch.mp3'); // Replace with the actual path to your sound file
+
+              // Function to play the sound
+              function playSound() {
+                sound.play();
+              }
+
+              // Add a click event listener to the button
+              document.getElementById("answers").addEventListener("click", playSound);
+            </script>
+          </div>
+
+          <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+          <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+          <script>
+            window.jQuery ||
+              document.write('<script src="js/vendor/jquery-3.4.0.min.js"><\/script>');
+          </script>
+          <!-- Your custom scripts -->
+          <script src="js/plugins.js"></script>
+          <script type="module" src="js/app/main.js"></script>
+        </div>
+        <!-- Bootstrap JS and Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+          crossorigin="anonymous"></script>
+        <div id="final"></div>
+      </div>
+    </div>
 </body>
 
 </html>

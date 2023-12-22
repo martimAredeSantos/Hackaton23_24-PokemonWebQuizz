@@ -15,6 +15,9 @@
     export const externals = {};
     
     internals.renderQuestion = function(question) {
+        $("#answers").css({
+            "pointer-events": "all"
+        });
         if (internals.elements.question) {
             internals.elements.question.empty();
             $("#answers").empty();
@@ -80,8 +83,18 @@
         });
 
         enemyHP.value -= 34;
+        $("#answers").css({
+            "pointer-events": "none"
+        });
+        
+  
 
-        setTimeout(() => {
+        if(enemyHP.value <= 0){
+        
+            setTimeout(() => {enemyHP.value = 100;}, 1000); 
+        }
+
+              setTimeout(() => {
             startController.start();
         }, 1000);
     }
@@ -108,6 +121,9 @@
             // Add more cases if you have more Pokemon
         }
         health.value -= 34;
+        $("#answers").css({
+            "pointer-events": "none"
+        });
         setTimeout(() => {
             startController.start();
         }, 1000);

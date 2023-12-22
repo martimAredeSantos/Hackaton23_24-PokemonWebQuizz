@@ -54,6 +54,8 @@ p {
     margin-left: 0px;
     margin-top: 50px;
     font-size: 20px;
+    font-weight: 700;
+    color: #ffcc01;
 }
 
 .index-button {
@@ -263,7 +265,6 @@ h1 {
     padding: 0px;
     margin: 0px;
 }
-
 
 .card:hover .title {
     transform: translate3d(0%, -50px, 100px);
