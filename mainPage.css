@@ -108,11 +108,11 @@ p {
 
 .pokemon-bulbasaur {
     background-image: url('resources/bulbasaur.webp');
-    height: 600px;
-    width: 700px;
+    height: 60%;
+    width: 50%;
     position: fixed;
-    bottom: 150px;
-    left: 1060px;
+    bottom: 15%;
+    left: 65%;
     background-repeat: no-repeat;
     background-size: contain;
     visibility: hidden;
@@ -120,11 +120,11 @@ p {
 
 .pokemon-charmander {
     background-image: url('resources/charmander.gif');
-    height: 700px;
-    width: 700px;
+    height: 70%;
+    width: 50%;
     position: fixed;
-    bottom: 120px;
-    left: 1060px;
+    bottom: 15%;
+    left: 65%;
     background-repeat: no-repeat;
     background-size: contain;
     visibility: hidden;
@@ -132,11 +132,11 @@ p {
 
 .pokemon-squirtle {
     background-image: url('resources/squirtle.gif');
-    height: 700px;
-    width: 700px;
+    height: 60%;
+    width: 50%;
     position: fixed;
-    bottom: 120px;
-    left: 1000px;
+    bottom: 15%;
+    left: 65%;
     background-repeat: no-repeat;
     background-size: contain;
     visibility: hidden;
