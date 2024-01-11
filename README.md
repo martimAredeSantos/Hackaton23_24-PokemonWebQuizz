@@ -13,4 +13,8 @@ It's an interactive experience that bridges the gap between a video game and a q
 
 ![3](https://github.com/martimAredeSantos/Hackaton23_24-PokemonWebQuizz/assets/147712420/7f9f4424-46f2-465f-ae04-c1a14407ae7a)
 
+**Works best in :**
+- FireFox
+- Chrome
+
 
