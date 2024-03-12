@@ -3,7 +3,7 @@
 ### :trophy: Winner of Hackaton Code4All 23/24 :trophy: ###
 Fully developed in native JS, CSS, and HTML5 in less than 24 hours :dart:
 
-CHECK IT OUT HERE  --->  https://martimaredesantos.github.io/Hackaton23_24-PokemonWebQuizz/
+[CLICK HERE](https://martimaredesantos.github.io/Hackaton23_24-PokemonWebQuizz/) 👀
 
 ![1](https://github.com/martimAredeSantos/Hackaton23_24-PokemonWebQuizz/assets/147712420/14d72eff-0fc4-4cbd-be30-9a7c6ce6d740)
 
